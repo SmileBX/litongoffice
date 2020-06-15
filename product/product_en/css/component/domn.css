@@ -1,0 +1,105 @@
+/* 说明书下载 */
+.title-domn{
+  height: 26px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  align-items: center;
+}
+.title-domn h5{
+font-size: 18px;
+font-weight: bold;
+}
+.title-domn-search{
+  width: 100px;
+  height: 20px;
+  border:1px solid rgba(153,153,153,1);
+border-radius:2px;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.title-domn-search input{
+  width: 100%;
+  border: none;
+}
+.title-domn-search-box{
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+}
+.title-domn-search-box img{
+  width: 100%;
+}
+/* 列表页面 */
+.down-list-box>li{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+   color: #333333;
+align-items: center;
+}
+.down-list-box>li div{
+  display: flex;
+  align-items: center;
+}
+.domn-serial{
+  font-size: 12px;
+  /* color: ; */
+}
+.domn-serial em{
+  margin-right: 20px;
+}
+.domn-name{
+  display: flex;
+  justify-content: space-between;
+}
+.domn-name>div{
+  margin-left: 20px;
+}
+.domn-ico a{
+  width:15px;
+  height: 15px;
+}
+.domn-ico a img{
+  width:15px;
+  height: 15px;
+}
+
+/* 分页样式 */
+.paging-box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  margin-bottom: 80px;
+}
+.paging-box span{
+  margin: 0 5px 0;
+  height: 20px;
+  text-align: center;
+  line-height: 18px;
+  border: 1px solid #333333;
+  cursor: pointer;
+}
+.paging-list{
+  /* width: 100%; */
+  margin: 0 5px 0;
+  display: flex;
+  /* justify-content: center; */
+}
+.paging-list li{
+  margin: 0 5px 0;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border: 1px solid #333333;
+}
+.paging-list-active{
+  background-color: #333333;
+  color: #ffffff;
+}

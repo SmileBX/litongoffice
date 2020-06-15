@@ -60,29 +60,51 @@ $(".input-title-box>input").click(function(){
 //}
 //$(".nav_right_box_btn").html(lancon)
 
+// $(".nav_right_box_btn").click(function(){
+//        //console.log(getQueryString) 
+// 	   console.log($(location)[0].href)
+//        var url=$(location).attr("href");
+//        if(url.indexOf("?")!=-1){                        //判断是否存在参数
+// 			url = url.replace(/(\?|#)[^'"]*/, '');           //去除参数
+// 		}
+//   if($(this).html()=="中文"){
+//     $(this).html("English")
+//     lan="en"
+// 	 // url=url+'?lan=en'
+//    // url=url+'?lan='+lan
+//    // $(location).attr('href', url);
+//   }else{
+//     $(this).html("中文")
+//    lan="cn"
+//   // $(location).attr('href', url);
+//   }
+  
+//   $.cookie("language",lan,{ expires: 7, path: '/', secure: false });
+//    url=url+'?lan='+lan
+//     console.log(url,"828282")
+//   $(location).attr('href', url); 
+  
+// })
+
+//中英文切换
 $(".nav_right_box_btn").click(function(){
-       //console.log(getQueryString) 
-	   console.log($(location)[0].href)
-       var url=$(location).attr("href");
-       if(url.indexOf("?")!=-1){                        //判断是否存在参数
-			url = url.replace(/(\?|#)[^'"]*/, '');           //去除参数
-		}
+	
+   let tabUrl = ''
+   let arr = ''
+   let pramas = ''
+   console.log($(location)[0].href)
+   let url_href=$(location)[0].href
+   arr = url_href.split('/')
+   console.log(arr,"arr111111")
+   pramas = arr[arr.length-1]
+   console.log(pramas,"pramas")
   if($(this).html()=="中文"){
-    $(this).html("English")
-    lan="en"
-	 // url=url+'?lan=en'
-   // url=url+'?lan='+lan
-   // $(location).attr('href', url);
+    tabUrl = 'official_en/'+pramas
   }else{
-    $(this).html("中文")
-   lan="cn"
-  // $(location).attr('href', url);
+   tabUrl = '../official_cn/'+pramas
   }
   
-  $.cookie("language",lan,{ expires: 7, path: '/', secure: false });
-   url=url+'?lan='+lan
-    console.log(url,"828282")
-  $(location).attr('href', url); 
+  $(location).attr('href', tabUrl); 
   
 })
 

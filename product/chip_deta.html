@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>芯片详情</title>
+  <link rel="stylesheet" href="./css/com/header.css">
+  <link rel="stylesheet" href="./css/com/footer.css">
+  <link rel="stylesheet" href="./css/com/com.css">
+  <link rel="stylesheet" href="./css/component/chip_deta.css">
+  <link rel="stylesheet" href="./css/bs/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/com/public.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+  <link rel="stylesheet" type="text/css" href="./css/swiper/swiper.min.css" />
+
+</head>
+
+<body>
+  <!-- 头部 -->
+  <nav>
+    <div class="nav-box">
+
+
+      <!-- logo -->
+      <div class="nav-box-title">
+        <!-- 头部第一行 -->
+        <div class="nav-logo">
+          <a  href="./index.html"><img src="./img/nav_logo.png" alt=""></a>
+        </div>
+        <div class="nav-input-box">
+          <input class="nav-input" type="text" placeholder="请输入关键字进行搜索">
+          <span class="nav-search">
+            <img src="./img/sousuo.png" alt="">
+          </span>
+        </div>
+        <div class="nav-sea-title">
+            <a href="./search.html">
+            <img src="./img/sousou.png" alt="">
+          </a>
+
+        </div>
+
+      </div>
+      <!-- 列表展示 -->
+      <div class="nav-list-box-sm">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- 列表 -->
+        <div class="collapse navbar-collapse nav-bot-box-sm " id="bs-example-navbar-collapse-1">
+          <ul class="nav-list-box  navbar-left ">
+            <!-- <li class="nav_down_one pad-leaf-none">
+              <a href="#" class="nav-down-one">首页</a>
+            </li>
+            <li class="nav_down_one">
+              <a class="nav-drop-down nav-down-one" href="./chip.html?type=chip&tab=0">芯片</a>
+              <div class="nav-box-tab">
+                <ul class="aboutus_skip">
+                  <li><a class="nav-drop-down" href="./chip.html?type=chip&tab=0">射频芯片</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=chip&tab=1">无线芯片</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=chip&tab=2">功放芯片</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav_down_one">
+              <a class="nav-drop-down nav-down-one" href="./chip.html?type=commun&tab=0">通讯模块</a>
+              <div class="nav-box-tab">
+                <ul class="aboutus_skip">
+                  <li><a class="nav-drop-down" href="./chip.html?type=commun&tab=0">模拟对讲模块</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=commun&tab=1">数字对讲模块</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=commun&tab=2">数据通讯模块</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=commun&tab=3">蓝牙模块</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=commun&tab=4">LTE宽带模块</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav_down_one">
+              <a class="nav-drop-down nav-down-one" href="./chip.html?type=radio&tab=0">射频功放模块</a>
+              <div class="nav-box-tab nav-box-tab3 ">
+                <ul class="aboutus_skip">
+                  <li><a class="nav-drop-down" href="./chip.html?type=radio&tab=0">基站-直放式功放</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=radio&tab=1">窄带首台功放</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=radio&tab=2">电子围栏功放</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=radio&tab=3">自主网功放</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=radio&tab=4">定制化</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav_down_one">
+              <a class="nav-drop-down nav-down-one" href="./terminal.html?type=terminal&tab=0">终端设备</a>
+              <div class="nav-box-tab">
+                <ul class="aboutus_skip">
+                  <li><a class="nav-drop-down" href="./terminal.html?type=terminal&tab=0">模拟终端</a></li>
+                  <li><a class="nav-drop-down" href="./terminal.html?type=terminal&tab=1">数字终端</a></li>
+                  <li><a class="nav-drop-down" href="./terminal.html?type=terminal&tab=2">公网对讲</a></li>
+                  <li><a class="nav-drop-down" href="./terminal.html?type=terminal&tab=3">船台</a></li>
+                  <li><a class="nav-drop-down" href="./terminal.html?type=terminal&tab=4">车台</a></li>
+                  <li><a class="nav-drop-down" href="./terminal.html?type=terminal&tab=5">其他无线终端</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav_down_one">
+              <a class="nav-drop-down nav-down-one" href="./chip.html?type=system&tab=0">系统及设备</a>
+              <div class="nav-box-tab">
+                <ul class="aboutus_skip">
+                  <li><a class="nav-drop-down" href="./chip.html?type=system&tab=0">智能中转台</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=system&tab=1">智能中转台</a></li>
+                  <li><a class="nav-drop-down" href="./chip.html?type=system&tab=1">智能中转台</a></li>
+                </ul>
+              </div>
+
+            </li>
+            <li class="nav_down_one"><a class="nav-drop-down nav-down-one" href="./chip.html?type=other&tab=0">其他配件</a></li> -->
+
+          </ul>
+          <!-- 切换按钮 -->
+          <div class="nav-list-btn  navbar-right">
+            <span class="nav_right_box_btn">中文</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </nav>
+
+
+  <!-- 主体内容 -->
+  <div class="chip-box">
+    <div class="box">
+      <!-- 左侧展示 -->
+      <div class="box-left">
+        <p class="box-left-title"></p>
+        <ul class="box-left-radio">
+          <!-- <li>
+              <a href="">
+            <div class="radio-box radio-box-active"></div><span class="text-active">射频芯片</span>
+          </a>
+          </li> -->
+          <!-- <li>
+            <div class="radio-box"></div><span> 无线芯片</span>
+          </li>
+          <li>
+            <div class="radio-box"></div><span>功放芯片</span>
+          </li> -->
+        </ul>
+      </div>
+
+      <!-- 右侧展示 -->
+      <div class="box-right">
+        <p class="box-right-title"><span><a href="./index.html">首页</a> </span> <span class="hidespan">></span><span class="facrumbs">
+          </span>
+          <span>></span> <span class="text-active"><a href="">详情</a> </span></p>
+        <!-- banenr图 -->
+        <div class="banenr-box">
+          <!-- <img src="./img/textbanenr.png" alt=""> -->
+          <div class="swiper-container" id="swiper4">
+            <div class="swiper-wrapper">
+              <!-- <div class="swiper-slide"><img class="banner-img" src="./img/index/index_banner1.jpg" alt=""></div> -->
+            </div>
+            <!-- 分页器 -->
+            <div class="swiper-pagination banner-box-pag"></div>
+          </div>
+
+        </div>
+        <!-- 列表展示 -->
+        <div class="list-box">
+          <!-- 类表展示title -->
+          <div class="list-box-title">
+            <span> <span class="name_cru1 hidespan"><a href=""></a></span><span class="hidespan">></span>
+              <span class="text-active name_cru2">
+              </span>
+            </span>
+            <div class="down-box">
+              <a href="">规格书下载</a>
+              <a href="./infor.html">软件包下载</a>
+            </div>
+          </div>
+          <!-- 内容 -->
+          <div class="date-box">
+            <!-- 左侧内容 -->
+            <div class="date-box-left">
+              <div class="show-box">
+                <!-- <img src="./img/textbanenr.png" alt=""> -->
+              </div>
+              <ul class="show-taber">
+                <!-- <li><img src="./img/textbanenr.png" alt=""></li>
+                <li><img src="./img/textbanenr.png" alt=""></li>
+                <li><img src="./img/textbanenr.png" alt=""></li>
+                <li><img src="./img/textbanenr.png" alt=""></li>
+                <li><img src="./img/textbanenr.png" alt=""></li> -->
+              </ul>
+
+            </div>
+            <!-- 右侧内容 -->
+
+            <div class="date-box-right">
+              <!-- <ul class="deploy-box">
+                    <li>
+                      <p class="deploy-title">功能及亮点</p>
+                      <p>功能及亮点功能及亮点功能及亮点功能及亮点</p>
+                    </li>
+                    <li>
+                      <p class="deploy-title">颜色</p>
+                      <p>功能及亮点功能及亮点功能及亮点功能及亮点功能及亮点</p>
+                    </li>
+                    <li>
+                      <p class="deploy-title">应用领域:</p>
+                      <p>功能及亮点功能及亮点功能及亮点功能及亮点功能及亮点功能及亮点功能及亮点</p>
+                    </li>
+                    <li>
+                      <p class="deploy-title">AT1846S性能参数::</p>
+                      <p>功能及亮点功能及亮点功能及亮点功能及亮点</p>
+                    </li>
+                  </ul> -->
+              <!-- Swiper -->
+              <!-- Swiper -->
+              <div class="swiper-container" id="swiper8">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <li class="fun-box">
+                      <!-- 点</p> -->
+                     
+                    </li>
+                    <li class="color-box">
+                      <p class="deploy-title">颜色</p>
+                      <div class="color-box-con">
+                        <!-- <span></span> -->
+                      </div>
+                      <!-- <p>功能及亮点功能及亮点功能及亮点功能及亮点功能及亮点</p> -->
+                    </li>
+                    <li class="config-box">
+                      <!-- <p class="deploy-title">应用领域:</p> -->
+                      <!-- <p>功能及亮点功能及亮点功能及亮点功能及亮点功能及亮点功能及亮点功能及亮点</p> -->
+                    </li>
+                    <!-- <li>
+                      <p class="deploy-title">AT1846S性能参数::</p>
+                      <p>功能及亮点功能及亮点功能及亮点功能及亮点</p>
+                    </li> -->
+                    </ul>
+                  </div>
+                </div>
+                <!-- Add Scroll Bar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+
+            </div>
+          </div>
+          <!-- 推荐产品 -->
+          <div class="recom-box">
+            <div class="recom-box-title"><span>产品配件</span>
+              <p class="recom-switch recom-switch2"><span class="prev">上一页</span> <span class="next">下一页</span></p>
+            </div>
+            <ul class="list-box-con list-box-con2">
+              <!-- <li>
+                <div class="list-box-img">
+                  <img src="./img/chip/xinpian1.jpg" alt="">
+                </div>
+                <div class="list-box-type">
+                  <p>AT1846S</p>
+                  <p>无线射频收发芯片</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="list-box-img">
+                  <img src="./img/chip/xinpian1.jpg" alt="">
+                </div>
+                <div class="list-box-type">
+                  <p>AT1846S</p>
+                  <p>无线射频收发芯片</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="list-box-img">
+                  <img src="./img/chip/xinpian1.jpg" alt="">
+                </div>
+                <div class="list-box-type">
+                  <p>AT1846S</p>
+                  <p>无线射频收发芯片</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="list-box-img">
+                  <img src="./img/chip/xinpian1.jpg" alt="">
+                </div>
+                <div class="list-box-type">
+                  <p>AT1846S</p>
+                  <p>无线射频收发芯片</p>
+                </div>
+              </li>
+              <li>
+                <div class="list-box-img">
+                  <img src="./img/chip/xinpian1.jpg" alt="">
+                </div>
+                <div class="list-box-type">
+                  <p>AT1846S</p>
+                  <p>无线射频收发芯片</p>
+                </div>
+              </li> -->
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- 底部 -->
+    <footer>
+      <div class="footer-box">
+        <div class="footer-box-con">
+          <!-- 底部logo -->
+          <div class="fonter-con-ico-box">
+            <div class="footer-con-logo">
+              <a href="./index.html"><img src="./img/footer_log.png" alt=""></a> </div>
+            <div class="footer-con-ico">
+              <!-- <a href="#"><span  class="footer-con-ico0"></span></a>
+            <a href="#"><span  class="footer-con-ico1"></span></a>
+            <a href="#"><span  class="footer-con-ico2"></span></a> -->
+            </div>
+          </div>
+          <!-- 底部列表 -->
+          <div class="footer-list">
+            <ul class="footer-list-box-title">
+              <!-- <li class="fo-list-one"><a href="#">力同简介</a></li>
+            <li><a href="#">工厂实力</a></li>
+            <li><a href="#">研发实力</a></li>
+            <li><a href="#">解决方案</a></li>
+            <li><a href="#">系统方案</a></li>
+            <li class="fo-list-end"><a href="#">探索精彩</a></li> -->
+            </ul>
+            <!-- 联系我们 相关链接 -->
+            <div class="footer-list-box-bottom">
+              <div class="contact-box">
+                <p><span class="contact-span"> 联系我们/</span>CONTACT &nbsp; US</p>
+                <p class="contact-box-ico"> <span><span
+                      class="footer-ico-bot footer-ico-bot0"></span>电话:0755-26068685</span> <span><span
+                      class="footer-ico-bot footer-ico-bot1"></span>传真: 0755-26405328</span> </p>
+                <p class="contact-box-ico"> <span><span
+                      class="footer-ico-bot footer-ico-bot2"></span><span>地址:深圳市南山区高新一道009号 &nbsp; 中国科技开发院3号楼17楼
+                    </span></span></p>
+              </div>
+              <div class="link-to-box">
+                <span><span class="contact-span"> 相关链接</span>/LINKS</span>
+                <div class="link-to-box-big">
+                  <a href="./stop_pro.html">停产产品</a>
+                  <a href="./down.html">下载中心</a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <p class="footer-bot">
+        Copy right:©力同科技 &nbsp; 粤ICP备12028371号-1
+      </p>
+    </footer>
+
+
+
+
+    <script src="./js/jq/jquery.min.js"></script>
+    <script src="./js/swiper/swiper.min.js"></script>
+    <script src="./js/bs/bootstrap.min.js"></script>
+    <script src="./js/com/api.js"></script>
+    <script src="./js/component/chip_deta.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+
+.box-left-radio  .box-left-radio-item{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: flex-start;
+}
+.child-item-list{
+  padding-left:27px;
+}
+.box-left-radio-item-title{
+  display: flex;
+  align-items: center;
+}
+.radio-box-smill{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  border: 1px solid #666666;
+  margin-right: 5px;
+}
+ .radio-box-smill-active{
+  background: url("../../img/xuanzhong2.png");
+}
+
+
+@media screen and (max-width: 640px){
+  .box-left-radio {
+    flex-wrap: wrap;
+  }
+  .box-left-radio-item{
+    width: 33%;
+  }
+  .child-item-list{
+    width: 100%;
+  }
+  .child-item-list li{
+    width: 100%;
+  }
+
+}

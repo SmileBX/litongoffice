@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>客户信息登记</title>
+  <link rel="stylesheet" href="./css/com/header.css">
+  <link rel="stylesheet" href="./css/com/footer.css">
+  <link rel="stylesheet" href="./css/component/infor.css">
+  <link rel="stylesheet" href="./css/bs/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/com/public.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+</head>
+<body>
+<div class="box">
+
+  <div class="register">
+
+    <div class="register-box">
+      <p class="regi-title">
+        <select class="form-control">
+          <!-- <option>请选择产品分类</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option> -->
+        </select>
+      </p>
+      <div >
+        <ul class="reg-msg-box">
+          <li class="name-box">
+            <span>name:</span>
+            <input type="text" placeholder="please input your name">
+          </li>
+          <li >
+            <span>gender</span>
+            <div class="sex-box">
+              <input type="radio" name="sex" value="man" checked>gentleman
+              <input type="radio" name="sex" value="lady">lady
+            </div>
+          </li>
+          <li class="phone-box">
+            <span>phone:</span>
+            <input type="text" placeholder="Please input your phone number">
+          </li>
+          <li class="email-box">
+            <span>mailbox:</span>
+            <input type="text" placeholder="Please enter your email address">
+          </li>
+          <li class="company-box">
+            <span>company:</span>
+            <input type="text" placeholder="please input company name">
+          </li>
+          <li class="region-box">
+            <span>
+              <!-- <select class="form-control reg-state">
+                <option>请选择国家</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select> -->
+              <span>country:</span>
+            </span>
+            <input type="text" placeholder="Please enter country">
+          </li>
+          <li class="for-con">
+            <span>content </span>
+            <textarea class="form-control"  rows="3"></textarea>
+
+          </li>
+          
+
+        </ul>
+      </div>
+      <div class="but-box">
+        <div class=" hint-con"><span></span></div>
+        <button>submit</button>
+        <p class="ret-box">
+          <a href="javascript:history.go(-1)">Back to Previous Level</a>
+        </p>
+      </div>
+
+    </div>
+    <div>
+      <p class="register-hint">Warm reminder: Our company will contact you as soon as possible, thank you</p>
+
+    </div>
+  </div>
+
+</div>
+
+
+  <script src="./js/jq/jquery.min.js"></script>
+  <script src="./js/swiper/swiper.min.js"></script>
+  <script src="./js/bs/bootstrap.min.js"></script>
+  <script src="./js/com/api.js"></script>
+  <script src="./js/component/infor.js"></script>
+
+  
+</body>
+</html>
