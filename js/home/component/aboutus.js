@@ -149,7 +149,7 @@ function Introduction(){
 
     
     //关于力同文章介绍
-      ajax("get",port.artic,"26/p/1/s/10/type/2",function(date){
+      ajax("get",port.artic,"12/p/1/s/10/type/2",function(date){
        console.log(date,22233)
        var bannerimg=string_arr(date[0].attachfiles)
         //渲染banenr图片
@@ -168,9 +168,19 @@ function Introduction(){
       }
       abo_swiper0=swiperbanner("abo_swiper0","#abo_swiper0")
 
-      //渲染文字
-      $(".abo_essay_con").html(date[0].articlecontent)
+     
+      var reg = new RegExp("(<img.*src=\"\.*?\>)");
+      var re = /.*src="([^"]*)"/g;  //只查找 /ckfinder/userfiles/images/qi_cym.jpg 这段路径
+      let data = date[0].articlecontent
+      var mre2=data.match(reg)
+      var mre=re.exec(mre2)[1]
+      let str = 'http://x4.cnyujiu.com'+mre
+      console.log(str)
+      data = data.replace(mre, str)
 
+       //渲染文字
+      $(".abo_essay_con").html(data)
+      
 
       })
 }
