@@ -524,7 +524,7 @@ background-position-y: -28px;
 .map_nav .add_0{
   position: absolute;
   top: 38%;
-  right: 22%;
+  right: 23%;
 }
 .map_nav .add_1{
   position: absolute;
@@ -533,13 +533,15 @@ background-position-y: -28px;
 }
 .map_nav .add_2{
   position: absolute;
-  top: 12%;
-  right: 19%;
+  /* top: 12%;
+  right: 19%; */
+  top: 24%;
+  right: 21%;
 }
 .map_nav .add_3{
   position: absolute;
-  top: 33%;
-  right: 19%;
+  top: 37%;
+  right: 20%;
 }
 .map_nav .add_4{
   position: absolute;
@@ -548,8 +550,8 @@ background-position-y: -28px;
 }
 .map_nav .add_5{
   position: absolute;
-  top: 25%;
-  right: 18%;
+  top: 32%;
+  right: 19.5%;
 }
 .map_nav .add_6{
   position: absolute;

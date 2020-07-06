@@ -1,8 +1,14 @@
 //封装api
-var ltapi="http://x4.cnyujiu.com//home/api/index";
-var imgapi="http://x4.cnyujiu.com";
-var searchapi="http://x4.cnyujiu.com/home/api/searchlst";
-var liuyan="http://x4.cnyujiu.com/home/api/liuyan"
+// var ltapi="http://x4.cnyujiu.com//home/api/index";
+// var imgapi="http://x4.cnyujiu.com";
+// var searchapi="http://x4.cnyujiu.com/home/api/searchlst";
+// var liuyan="http://x4.cnyujiu.com/home/api/liuyan"
+
+
+var ltapi="http://new.auctus.cn/home/api/index";
+var imgapi="http://new.auctus.cn";
+var searchapi="http://new.auctus.cn/home/api/searchlst";
+var liuyan="http://new.auctus.cn/home/api/liuyan"
 //接口
 var port={
   "peijian":"peijian",

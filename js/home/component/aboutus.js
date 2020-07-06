@@ -39,7 +39,7 @@
 
 
  
-  <!-- 资质荣耀taber切换 -->
+  // <!-- 资质荣耀taber切换 -->
   $(function(){
     $(".glory_title li").off("click").on("click",function(){
       var index = $(this).index();
@@ -80,7 +80,7 @@
      
      
      
-      <!-- 关于力同taber切换 -->   
+      // <!-- 关于力同taber切换 -->   
         $(".abo_box_taber li").off("click").on("click",function(){
           var index = $(this).index();
 		  console.log(index,"kkkkkkkkkk") 
@@ -168,18 +168,19 @@ function Introduction(){
       }
       abo_swiper0=swiperbanner("abo_swiper0","#abo_swiper0")
 
-     
-      var reg = new RegExp("(<img.*src=\"\.*?\>)");
-      var re = /.*src="([^"]*)"/g;  //只查找 /ckfinder/userfiles/images/qi_cym.jpg 这段路径
-      let data = date[0].articlecontent
-      var mre2=data.match(reg)
-      var mre=re.exec(mre2)[1]
-      let str = 'http://x4.cnyujiu.com'+mre
-      console.log(str)
-      data = data.replace(mre, str)
 
+      let data = [];
+      date[0].articlecontent.replace(/<img [^>]*src=['"]([^'"]+)[^>]*>/g, function (match, capture) {
+        data.push(capture);
+      });
+      // console.log(data,"11111111111");
+      data.map(item=>{
+        // console.log(item,"111111111111111111111")
+        let str = imgapi+item
+        date[0].articlecontent = date[0].articlecontent.replace(item, str)
+      })
        //渲染文字
-      $(".abo_essay_con").html(data)
+      $(".abo_essay_con").html(date[0].articlecontent)
       
 
       })
@@ -263,7 +264,7 @@ function development (){
 //公司分布接口03
 function distribution(){
   ajax("get",port.artic,"28/p/1/s/10/type/2",function(date){
-   // //console.log(date,"banner图")
+   console.log(date,"banner图")
     var str="";
     var strtitle="";
     for(var i=0; i<date.length;i++){
@@ -289,6 +290,9 @@ function distribution(){
 
 
     $(".map_nav").html(str);
+    //2020-7-6暂时隐藏美国
+    $(".map_nav").children('.add_1').css('display','none')
+    //end
     $(".map-smil-box-img").html(strtitle);
 
    // //小图处理
@@ -429,7 +433,7 @@ function  responsibility(){
     $(".duty_title-box .duty_title li").eq(0).addClass("duty_title_active") ;
     var title_length=date.length;
    // //console.log(title_length,2222)
-  <!-- 社会责任 -->
+  // <!-- 社会责任 -->
   $(function(){
 
      taberone(".duty_title>li","duty_title_active",".duty_box .duty_box_con")
